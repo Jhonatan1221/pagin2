@@ -15,13 +15,19 @@
     
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/main.js"">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
     <title>Login</title>
   </head>
   <body>
-  
 
-  <div class="d-lg-flex half">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="/main.js"></script>
+  
+   
+  <div class="d-lg-flex half" id="signinModal">
     <div class="bg order-1 order-md-2" style="background-image: url('images/bg_1.jpg');"></div>
     <div class="contents order-2 order-md-1">
 
@@ -32,15 +38,14 @@
               <h3>Login</h3>
               <p class="mb-4">Por favor introduce tus datos!.</p>
             </div>
-            <form action="#" method="post">
+            <form id="login-form"">
               <div class="form-group first">
-                <label for="username">Usuario</label>
-                <input type="text" class="form-control" id="username">
-
+                <label for="email">Email</label>
+                <input type="email" id="login-email" class="form-control" placeholder=""required>
               </div>
               <div class="form-group last mb-3">
                 <label for="password">Contraseña</label>
-                <input type="password" class="form-control" id="password">
+                <input type="password" id="login-password" class="form-control" placeholder="" required>
                 
               </div>
               
@@ -56,13 +61,17 @@
 
               <span class="d-block text-center my-4 text-muted">&mdash; or &mdash;</span>
               
-              <div class="social-login">
-
-                <a href="/dashboard/dashboard.html" class="google btn d-flex justify-content-center align-items-center">
-                  <span class="icon-google mr-3"></span> Login with  Google
-                </a>
-              </div>
+             
             </form>
+
+            <div class="social-login" button type="button" id="googleLogin">
+              <a href="" class="google btn d-flex justify-content-center align-items-center">
+                <span class="icon-google mr-3 "></span> Login with  Google
+              </a>
+            </div>
+
+
+
           </div>
         </div>
       </div>
